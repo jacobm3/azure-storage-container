@@ -18,5 +18,16 @@ resource "azurerm_storage_account" "demo" {
 resource "azurerm_storage_container" "jmartinson01" {
   name                  = "jmartinson-container-01"
   storage_account_name  = azurerm_storage_account.demo.name
-  container_access_type = "private"
+  container_access_type = "container"
+}
+
+resource "azurestack_storage_blob" "jmartinson01-demosb" {
+  name = "jmartinson01-demosb"
+
+  resource_group_name    = azurestack_resource_group.demo.name
+  storage_account_name   = azurestack_storage_account.demo.name
+  storage_container_name = azurestack_storage_container.demo.name
+
+  type = "page"
+  size = 5120
 }
