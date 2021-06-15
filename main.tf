@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 resource "azurerm_resource_group" "demo" {
   name     = "jmartinson-demo2021"
   location = "West Europe"
