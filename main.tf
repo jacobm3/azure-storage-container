@@ -21,7 +21,7 @@ resource "azurerm_storage_container" "demo" {
   container_access_type = "container"
 }
 
-resource "azurestack_storage_blob" "jmartinson01-demosb" {
+resource "azurerm_storage_blob" "jmartinson01-demosb" {
   name = "jmartinson01-demosb"
 
   resource_group_name    = azurerm_resource_group.demo.name
