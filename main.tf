@@ -4,7 +4,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "demo" {
   name     = "jmartinson-demo2021"
-  location = "West Europe"
+  location = "us-central"
 }
 
 resource "azurerm_storage_account" "demo" {
@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "demo" {
   location                 = azurerm_resource_group.demo.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  allow_blob_public_access = true
+  allow_blob_public_access = false
 
   tags = {
     environment = "staging"
