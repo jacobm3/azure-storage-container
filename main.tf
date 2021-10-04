@@ -4,7 +4,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "demo" {
   name     = "jmartinson-demo2021"
-  location = "us-central"
+  location = "centralus"
 }
 
 resource "azurerm_storage_account" "demo" {
