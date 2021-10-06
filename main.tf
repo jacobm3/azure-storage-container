@@ -23,7 +23,7 @@ resource "azurerm_storage_account" "demo" {
 resource "azurerm_storage_container" "demo" {
   name                  = "jmartinson-container-01b"
   storage_account_name  = azurerm_storage_account.demo.name
-  container_access_type = "container"
+  container_access_type = "private"
 }
 
 
